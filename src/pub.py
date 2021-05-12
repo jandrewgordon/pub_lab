@@ -9,6 +9,11 @@ class Pub:
 
     def add_funds(self, amount):
         self.till += amount
+        
+    def get_inv_object(self, search_string):
+        for i in self.inventory:
+            if search_string == i['item'].name:
+                return i['item']
 
     def check_age(self, customer):
         if customer.age >= 18:
