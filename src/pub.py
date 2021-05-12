@@ -1,9 +1,10 @@
 class Pub:
     
-    def __init__(self, name, till, drinks):
+    def __init__(self, name, till, drinks, food):
         self.name = name
         self.till = till
         self.drinks = drinks
+        self.food = food
 
     def add_funds(self, amount):
         self.till += amount
@@ -21,3 +22,7 @@ class Pub:
     def decide_service(self, customer):
         if self.check_age(customer) and self.check_drunkeness(customer):
             return True
+        
+        
+    def adjust_stock(self, item):
+        item.stock -= 1

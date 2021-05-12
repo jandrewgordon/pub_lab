@@ -10,4 +10,8 @@ class Customer:
         if pub.decide_service(self):
             self.wallet -= drink.price
             self.drunkeness += drink.alcohol_level
+            
+    def buy_food(self, food, pub):
+        self.wallet -= food.price
+        self.drunkeness -= food.rejuvination_level
 
